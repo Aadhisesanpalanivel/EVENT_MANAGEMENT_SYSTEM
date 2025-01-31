@@ -1,0 +1,40 @@
+.delete-events-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: 400px;
+    margin: auto;
+}
+
+.delete-events-container h2 {
+    text-align: center;
+}
+
+.delete-events-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.delete-events-container li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.delete-events-container button {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-events-container button:hover {
+    background-color: #c82333;
+}

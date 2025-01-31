@@ -1,0 +1,192 @@
+.event-search-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.event-search-container input {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.event-search-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.event-search-container li {
+    padding: 10px;
+    background: #f9f9f9;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+.search-filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.search-input,
+.category-select,
+.date-input,
+.sort-select {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.search-input:focus,
+.category-select:focus,
+.date-input:focus,
+.sort-select:focus {
+    border-color: #1976D2;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.event-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.event-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: white;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.event-card.upcoming .event-status {
+    background-color: #4CAF50;
+}
+
+.event-card.ongoing .event-status {
+    background-color: #2196F3;
+}
+
+.event-card.completed .event-status {
+    background-color: #9E9E9E;
+}
+
+.event-card.cancelled .event-status {
+    background-color: #F44336;
+}
+
+.event-details {
+    padding: 15px;
+}
+
+.event-details h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.event-date,
+.event-location {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.event-capacity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.available-spots {
+    color: #4CAF50;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.category-tag {
+    background-color: #E3F2FD;
+    color: #1976D2;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.no-events {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 16px;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 18px;
+}
+
+.error {
+    text-align: center;
+    padding: 40px;
+    color: #F44336;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .search-filters {
+        flex-direction: column;
+    }
+
+    .search-input,
+    .category-select,
+    .date-input,
+    .sort-select {
+        width: 100%;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+}

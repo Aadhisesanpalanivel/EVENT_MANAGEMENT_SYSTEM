@@ -1,0 +1,10 @@
+.event-export-container {
+    padding: 20px;
+    text-align: center;
+}
+
+event-export-container a {
+    text-decoration: none;
+    color: #1976D2;
+    font-weight: bold;
+}
