@@ -22,7 +22,7 @@ export const EventProvider = ({ children }) => {
         try {
             setLoading(true);
             console.log('Fetching events...');
-            const response = await axios.get('http://localhost:5000/api/events');
+            const response = await axios.get('https://event-management-system-uw9g.onrender.com/api/events');
             console.log('Events fetched:', response.data);
             setEvents(response.data);
             setError(null);
@@ -54,7 +54,7 @@ export const EventProvider = ({ children }) => {
             }
 
             const response = await axios.post(
-                'http://localhost:5000/api/events',
+                'https://event-management-system-uw9g.onrender.com/api/events',
                 eventData,
                 config
             );
@@ -79,7 +79,7 @@ export const EventProvider = ({ children }) => {
             };
 
             const response = await axios.post(
-                `http://localhost:5000/api/events/${eventId}/register`,
+                `https://event-management-system-uw9g.onrender.com/api/events/${eventId}/register`,
                 {},
                 config
             );
@@ -105,7 +105,7 @@ export const EventProvider = ({ children }) => {
             };
 
             const response = await axios.post(
-                `http://localhost:5000/api/events/${eventId}/unregister`,
+                `https://event-management-system-uw9g.onrender.com/api/events/${eventId}/unregister`,
                 {},
                 config
             );
@@ -133,7 +133,7 @@ export const EventProvider = ({ children }) => {
             };
 
             const response = await axios.put(
-                `http://localhost:5000/api/events/${eventId}`,
+                `https://event-management-system-uw9g.onrender.com/api/events/${eventId}`,
                 eventData,
                 config
             );
@@ -162,7 +162,7 @@ export const EventProvider = ({ children }) => {
             };
 
             await axios.delete(
-                `http://localhost:5000/api/events/${eventId}`,
+                `https://event-management-system-uw9g.onrender.com/api/events/${eventId}`,
                 config
             );
 
@@ -186,7 +186,7 @@ export const EventProvider = ({ children }) => {
             };
 
             const response = await axios.get(
-                'http://localhost:5000/api/events/user',
+                'https://event-management-system-uw9g.onrender.com/api/events/user',
                 config
             );
 

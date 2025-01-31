@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
 
     const register = async (name, email, password) => {
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/register', {
+            const response = await axios.post('https://event-management-system-uw9g.onrender.com/api/auth/register', {
                 name,
                 email,
                 password
